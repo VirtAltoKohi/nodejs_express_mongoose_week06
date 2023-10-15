@@ -69,6 +69,7 @@ routes.delete("/book/:bookid", async (req, res) => {
         if (!book) {
             res.status(200).send({message: "BOook not found"})
         } else {
+            console.log(book)
             res.status(204).send(book);
         }
     } catch(error) {
